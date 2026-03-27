@@ -65,7 +65,7 @@ pip install -r requirements.txt
 
 - Located in:
   ```
-  data/GUARD-SLM/Dataset/Train/llama/v2/
+  Dataset/Train/llama/v2/
   ```
 
 - Includes diverse jailbreak attacks:
