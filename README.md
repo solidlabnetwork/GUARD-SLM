@@ -1,79 +1,83 @@
-## Experimental Setup
+# GUARD-SLM: Activation-Based Jailbreak Defense for Language Models
 
-We evaluate **GUARD-SLM** on both Small Language Models (SLMs) and Large Language Models (LLMs) under diverse jailbreak attack scenarios.
-
----
-
-### Models
-
-#### Small Language Models (SLMs)
-
-- **LLaMA-2-7B**  
-  → https://huggingface.co/meta-llama/Llama-2-7b-chat-hf  
-
-- **Vicuna-7B**  
-  → https://huggingface.co/lmsys/vicuna-7b-v1.5  
-
-- **Mistral-7B**  
-  → https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2  
-
-- **Yi-6B**  
-  → https://huggingface.co/01-ai/Yi-6B-Chat  
-
-- **Qwen-7B**  
-  → https://huggingface.co/Qwen/Qwen1.5-7B-Chat  
-
-- **Gemma-7B**  
-  → https://huggingface.co/google/gemma-7b-it  
-
-- **OpenChat-3.5**  
-  → https://huggingface.co/openchat/openchat-3.5-0106  
+GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malicious prompts using **last-token hidden-layer activations** without requiring model retraining.
 
 ---
 
-#### Large Language Models (LLMs)
+## 🚀 Overview
 
-- **LLaMA-2-13B**  
-  → https://huggingface.co/meta-llama/Llama-2-13b-chat-hf  
-
-- **Vicuna-13B**  
-  → https://huggingface.co/lmsys/vicuna-13b-v1.5  
-
-- **Qwen-14B**  
-  → https://huggingface.co/Qwen/Qwen1.5-14B-Chat  
+- Detects jailbreak prompts using **representation-space signals**
+- Uses **single forward pass (no extra tokens)**
+- Works across multiple jailbreak attack families
+- Evaluated on both **SLMs and LLMs**
 
 ---
 
-### Datasets
+## 📦 Installation
 
-#### Benchmark Datasets
+```bash
+git clone <your-repo-link>
+cd GUARD-SLM
 
-- **AdvBench**  
-  → https://huggingface.co/datasets/Lemhf14/EasyJailbreak_Datasets  
-  → malicious jailbreak prompts  
-
-- **Alpaca**  
-  → https://huggingface.co/datasets/tatsu-lab/alpaca  
-  → benign instructions  
-
-- **JailbreakV-28K (JBKV)**  
-  → https://huggingface.co/datasets/JailbreakV-28K/JailBreakV-28k  
-  → large-scale jailbreak dataset  
-
-- **HarmBench**  
-  → https://huggingface.co/datasets/thu-coai/AISafetyLab_Datasets  
-  → evaluation and generalization  
+pip install -r requirements.txt
+```
 
 ---
 
-### Additional Malicious Data
+## ⚙️ Environment Setup
 
-- Located under:
+```bash
+export LD_LIBRARY_PATH=/path/to/env/lib/python3.11/site-packages/nvidia/nccl/lib:$LD_LIBRARY_PATH
+export CUDA_VISIBLE_DEVICES=0
+```
+
+---
+
+## 🧠 Models
+
+### Small Language Models (SLMs)
+
+| Name         | Model ID                              | Link |
+|--------------|--------------------------------------|------|
+| LLaMA-2-7B   | meta-llama/Llama-2-7b-chat-hf        | https://huggingface.co/meta-llama/Llama-2-7b-chat-hf |
+| Vicuna-7B    | lmsys/vicuna-7b-v1.5                 | https://huggingface.co/lmsys/vicuna-7b-v1.5 |
+| Mistral-7B   | mistralai/Mistral-7B-Instruct-v0.2   | https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2 |
+| Yi-6B        | 01-ai/Yi-6B-Chat                     | https://huggingface.co/01-ai/Yi-6B-Chat |
+| Qwen-7B      | Qwen/Qwen1.5-7B-Chat                 | https://huggingface.co/Qwen/Qwen1.5-7B-Chat |
+| Gemma-7B     | google/gemma-7b-it                   | https://huggingface.co/google/gemma-7b-it |
+| OpenChat-3.5 | openchat/openchat-3.5-0106           | https://huggingface.co/openchat/openchat-3.5-0106 |
+
+---
+
+### Large Language Models (LLMs)
+
+| Name         | Model ID                              | Link |
+|--------------|--------------------------------------|------|
+| LLaMA-2-13B  | meta-llama/Llama-2-13b-chat-hf       | https://huggingface.co/meta-llama/Llama-2-13b-chat-hf |
+| Vicuna-13B   | lmsys/vicuna-13b-v1.5                | https://huggingface.co/lmsys/vicuna-13b-v1.5 |
+| Qwen-14B     | Qwen/Qwen1.5-14B-Chat                | https://huggingface.co/Qwen/Qwen1.5-14B-Chat |
+
+---
+
+## 📊 Datasets
+
+| Dataset Name           | Hugging Face ID                         | Link |
+|-----------------------|----------------------------------------|------|
+| AdvBench              | Lemhf14/EasyJailbreak_Datasets         | https://huggingface.co/datasets/Lemhf14/EasyJailbreak_Datasets |
+| Alpaca                | tatsu-lab/alpaca                       | https://huggingface.co/datasets/tatsu-lab/alpaca |
+| JailbreakV-28K (JBKV) | JailbreakV-28K/JailBreakV-28k          | https://huggingface.co/datasets/JailbreakV-28K/JailBreakV-28k |
+| HarmBench             | thu-coai/AISafetyLab_Datasets          | https://huggingface.co/datasets/thu-coai/AISafetyLab_Datasets |
+
+---
+
+## ⚠️ Additional Malicious Data
+
+- Located in:
   ```
   data/GUARD-SLM/Dataset/Train/llama/v2/
   ```
 
-- Includes diverse attack families:
+- Includes diverse jailbreak attacks:
   - AutoDAN
   - GCG
   - PAIR
@@ -82,39 +86,140 @@ We evaluate **GUARD-SLM** on both Small Language Models (SLMs) and Large Languag
   - ICA
   - Jailbroken
   - TAP
-  - Additional variants  
 
-- Partially inspired by:
-  - **JBShield (USENIX Security 2025)**  
-    https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi  
+- Inspired by:
+  - JBShield (USENIX Security 2025)  
+    https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
 
 ---
 
-### Our Data
+## 🧪 Pipeline
 
-All datasets under:
+### 1. Extract Activations
+
+```bash
+python main.py \
+  --model meta-llama/Llama-2-7b-chat-hf \
+  --use-advbench \
+  --use-alpaca \
+  --other-malicious-json data/GUARD-SLM/Dataset/Train/llama/v2/malicious.json \
+  --jailbreak-json data/Train/llama/v1/autodan_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v2/autodan_llama-2.json \
+  --jailbreak-json data/Train/llama/v1/cipher_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v1/codechamelon_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v1/deepinception_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v1/gcg_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v2/gcg_llama-2.json \
+  --jailbreak-json data/Train/llama/v1/ica_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v1/jailbroken_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v1/pair_advbench_llama-2_7B.jsonl \
+  --jailbreak-json data/Train/llama/v2/pair_llama-2.json \
+  --jailbreak-json data/Train/llama/v1/tap_advbench_llama-2_7B.jsonl \
+  --outdir activation_data
+```
+
+---
+
+### 2. Visualization (t-SNE)
+
+```bash
+python activation_analysis.py \
+  --input activation_data/<generated_file>.jsonl \
+  --layer 31 \
+  --max-samples 52000 \
+  --outdir activation_figures
+```
+
+---
+
+### 3. Train Classifier (Single Layer)
+
+```bash
+python activation_classification.py \
+  --input activation_data/<generated_file>.jsonl \
+  --layer 18 \
+  --outdir saved_models/llama \
+  --model-name llama_layer_18 \
+  --overwrite
+```
+
+---
+
+### 4. Train for All Layers
+
+```bash
+for layer in $(seq 0 31); do
+  python activation_classification.py \
+    --input activation_data/<generated_file>.jsonl \
+    --layer ${layer} \
+    --outdir saved_models/llama \
+    --model-name llama_layer_${layer} \
+    --overwrite
+done
+```
+
+---
+
+### 5. Inference (HarmBench)
+
+```bash
+for layer in $(seq 0 31); do
+  python inference.py \
+    --model meta-llama/Llama-2-7b-chat-hf \
+    --svm-path saved_models/llama/llama_layer_${layer}.joblib \
+    --layer ${layer} \
+    --input-file thu-coai/AISafetyLab_Datasets \
+    --hf-subset harmbench \
+    --hf-split standard \
+    --text-key query \
+    --out-dir outputs/llama_harmbench
+done
+```
+
+---
+
+## 📂 Project Structure
 
 ```
 data/
+activation_data/
+activation_figures/
+saved_models/
+outputs/
 ```
 
-are:
-- generated by our pipeline, or  
-- curated and standardized for consistent evaluation  
+---
+
+## 📈 Evaluation
+
+- Metric: **Attack Success Rate (ASR)**
+- Evaluator: **GPT-4o-mini**
 
 ---
 
-### Evaluator
+## 📌 Key Features
 
-- **GPT-4o-mini** is used for computing Attack Success Rate (ASR).
+- No retraining required  
+- Single forward pass  
+- Works across multiple jailbreak attacks  
+- Efficient and scalable  
 
 ---
 
-### Summary
+## 📜 Citation
 
-- Multi-model evaluation (SLMs + LLMs)  
-- Multiple datasets (AdvBench, Alpaca, JBKV, HarmBench)  
-- Additional curated malicious data  
-- Diverse jailbreak attack strategies  
+```bibtex
+@inproceedings{your2026guard,
+  title={GUARD-SLM: Activation-Based Jailbreak Defense},
+  author={Your Name},
+  year={2026}
+}
+```
 
-This setup enables a **comprehensive and robust evaluation** of jailbreak attacks and defense performance.
+---
+
+## ⭐ Acknowledgement
+
+- EasyJailbreak Dataset
+- JBShield (USENIX Security 2025)
+- Hugging Face community
