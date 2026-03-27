@@ -1,4 +1,4 @@
-# GUARD-SLM: Activation-Based Jailbreak Defense for Language Models
+# GUARD-SLM: Token Activation-Based Defense Against Jailbreak Attacks for Small Language Models
 
 GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malicious prompts using **last-token hidden-layer activations** without requiring model retraining.
 
