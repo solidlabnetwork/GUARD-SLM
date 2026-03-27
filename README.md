@@ -169,42 +169,19 @@ done
 
 ---
 
-## 📂 Project Structure
-
-```
-data/
-activation_data/
-activation_figures/
-saved_models/
-outputs/
-```
-
----
-
 ## 📈 Evaluation
 
 - Metric: **Attack Success Rate (ASR)**
-- Evaluator: **GPT-4o-mini**
+- Evaluator: **GPT-4o and GPT-4o-mini**
 
 ---
 
-## 📌 Key Features
 
-- No retraining required  
-- Single forward pass  
-- Works across multiple jailbreak attacks  
-- Efficient and scalable  
-
----
 
 ## 📜 Citation
 
 ```bibtex
-@inproceedings{your2026guard,
-  title={GUARD-SLM: Activation-Based Jailbreak Defense},
-  author={Your Name},
-  year={2026}
-}
+
 ```
 
 ---
