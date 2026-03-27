@@ -7,38 +7,61 @@ We evaluate **GUARD-SLM** on both Small Language Models (SLMs) and Large Languag
 ### Models
 
 #### Small Language Models (SLMs)
-- **LLaMA-2-7B** → `meta-llama/Llama-2-7b-chat-hf`
-- **Vicuna-7B** → `lmsys/vicuna-7b-v1.5`
-- **Mistral-7B** → `mistralai/Mistral-7B-Instruct-v0.2`
-- **Yi-6B** → `01-ai/Yi-6B-Chat`
-- **Qwen-7B** → `Qwen/Qwen1.5-7B-Chat`
-- **Gemma-7B** → `google/gemma-7b-it`
-- **OpenChat-3.5** → `openchat/openchat-3.5-0106`
+
+- **LLaMA-2-7B**  
+  → https://huggingface.co/meta-llama/Llama-2-7b-chat-hf  
+
+- **Vicuna-7B**  
+  → https://huggingface.co/lmsys/vicuna-7b-v1.5  
+
+- **Mistral-7B**  
+  → https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2  
+
+- **Yi-6B**  
+  → https://huggingface.co/01-ai/Yi-6B-Chat  
+
+- **Qwen-7B**  
+  → https://huggingface.co/Qwen/Qwen1.5-7B-Chat  
+
+- **Gemma-7B**  
+  → https://huggingface.co/google/gemma-7b-it  
+
+- **OpenChat-3.5**  
+  → https://huggingface.co/openchat/openchat-3.5-0106  
+
+---
 
 #### Large Language Models (LLMs)
-- **LLaMA-2-13B** → `meta-llama/Llama-2-13b-chat-hf`
-- **Vicuna-13B** → `lmsys/vicuna-13b-v1.5`
-- **Qwen-14B** → `Qwen/Qwen1.5-14B-Chat`
+
+- **LLaMA-2-13B**  
+  → https://huggingface.co/meta-llama/Llama-2-13b-chat-hf  
+
+- **Vicuna-13B**  
+  → https://huggingface.co/lmsys/vicuna-13b-v1.5  
+
+- **Qwen-14B**  
+  → https://huggingface.co/Qwen/Qwen1.5-14B-Chat  
 
 ---
 
 ### Datasets
 
 #### Benchmark Datasets
+
 - **AdvBench**  
-  `Lemhf14/EasyJailbreak_Datasets`  
+  → https://huggingface.co/datasets/Lemhf14/EasyJailbreak_Datasets  
   → malicious jailbreak prompts  
 
 - **Alpaca**  
-  `tatsu-lab/alpaca`  
+  → https://huggingface.co/datasets/tatsu-lab/alpaca  
   → benign instructions  
 
 - **JailbreakV-28K (JBKV)**  
-  `JailbreakV-28K/JailBreakV-28k`  
+  → https://huggingface.co/datasets/JailbreakV-28K/JailBreakV-28k  
   → large-scale jailbreak dataset  
 
 - **HarmBench**  
-  `thu-coai/AISafetyLab_Datasets`  
+  → https://huggingface.co/datasets/thu-coai/AISafetyLab_Datasets  
   → evaluation and generalization  
 
 ---
@@ -59,7 +82,7 @@ We evaluate **GUARD-SLM** on both Small Language Models (SLMs) and Large Languag
   - ICA
   - Jailbroken
   - TAP
-  - Additional variants
+  - Additional variants  
 
 - Partially inspired by:
   - **JBShield (USENIX Security 2025)**  
@@ -94,4 +117,4 @@ are:
 - Additional curated malicious data  
 - Diverse jailbreak attack strategies  
 
-This setup enables a **comprehensive and robust evaluation** of jailbreak vulnerability and defense performance.
+This setup enables a **comprehensive and robust evaluation** of jailbreak attacks and defense performance.
