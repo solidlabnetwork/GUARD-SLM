@@ -82,7 +82,7 @@ are either:
 
 ### Evaluator
 
-- GPT-4o-mini is used as the evaluation model for attack success rate (ASR).
+- GPT-4o  and GPT-4o-mini is used as the evaluation model for attack success rate (ASR).
 
 ---
 
