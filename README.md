@@ -51,7 +51,7 @@ We incorporate additional malicious prompts to improve robustness:
 
 - Partially data collected from:
   - JBShield (USENIX Security 2025)  
-    https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
+   https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
 
 - Includes diverse attack styles such as:
   - AutoDAN
