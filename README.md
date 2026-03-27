@@ -4,7 +4,7 @@ GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malici
 
 ---
 
-## 🚀 Overview
+## Overview
 
 - Detects jailbreak prompts using **representation-space signals**
 - Uses **single forward pass (no extra tokens)**
@@ -13,7 +13,7 @@ GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malici
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 git clone <your-repo-link>
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🧠 Models
+## Models
 
 ### Small Language Models (SLMs)
 
@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📊 Datasets
+## Datasets
 
 | Dataset Name           | Hugging Face ID                         | Link |
 |-----------------------|----------------------------------------|------|
@@ -178,7 +178,7 @@ done
 
 
 
-## 📜 Citation
+## Citation
 
 ```bibtex
 
