@@ -49,7 +49,7 @@ We incorporate additional malicious prompts to improve robustness:
   data/GUARD-SLM/Dataset/Train/llama/v2/
   ```
 
-- Partially inspired by:
+- Partially data collected from:
   - JBShield (USENIX Security 2025)  
     https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
 
