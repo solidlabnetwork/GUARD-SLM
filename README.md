@@ -1,13 +1,4 @@
-# GUARD-SLM Pipeline
-
-## Environment Setup
-
-```bash
-export LD_LIBRARY_PATH=/path/to/env/lib/python3.11/site-packages/nvidia/nccl/lib:$LD_LIBRARY_PATH
-export CUDA_VISIBLE_DEVICES=1
-```
-
----
+# GUARD-SLM
 
 ## 1. Extract Activations
 
