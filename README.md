@@ -70,7 +70,7 @@ export CUDA_VISIBLE_DEVICES=0
 
 ---
 
-## ⚠️ Additional Malicious Data
+## Additional Malicious Data
 
 - Located in:
   ```
@@ -87,7 +87,7 @@ export CUDA_VISIBLE_DEVICES=0
   - Jailbroken
   - TAP
 
-- Inspired by:
+- Some malicious data collected from:
   - JBShield (USENIX Security 2025)  
     https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
 
