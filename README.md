@@ -24,15 +24,6 @@ pip install -r requirements.txt
 
 ---
 
-## ⚙️ Environment Setup
-
-```bash
-export LD_LIBRARY_PATH=/path/to/env/lib/python3.11/site-packages/nvidia/nccl/lib:$LD_LIBRARY_PATH
-export CUDA_VISIBLE_DEVICES=0
-```
-
----
-
 ## 🧠 Models
 
 ### Small Language Models (SLMs)
