@@ -84,7 +84,7 @@ pip install -r requirements.txt
 
 ---
 
-## 🧪 Pipeline
+## Experiments
 
 ### 1. Extract Activations
 
