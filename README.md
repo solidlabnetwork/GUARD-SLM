@@ -116,6 +116,7 @@ python main.py \
 ---
 
 ### 2. Visualization (t-SNE)
+In this step, we visualize diverse prompts in the representation space using t-SNE to understand how they are distributed across different layers. This analysis helps reveal insights into prompt behavior for benign inputs, direct malicious prompts, and optimized jailbreak prompts.
 
 ```bash
 python activation_analysis.py \
@@ -128,7 +129,7 @@ python activation_analysis.py \
 ---
 
 ### 3. Train Classifier (Single Layer)
-
+In this step, we use the last-token activations from a selected layer to train a classifier that distinguishes between benign and malicious (jailbreak) prompts in the representation space. This enables effective detection of unsafe inputs during inference.
 ```bash
 python activation_classification.py \
   --input activation_data/<generated_file>.jsonl \
