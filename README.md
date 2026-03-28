@@ -63,7 +63,8 @@ pip install -r requirements.txt
 
 ## Additional Malicious Data
 
-- Includes diverse jailbreak attacks:
+- We construct a comprehensive malicious dataset through empirical analysis across **7 SLMs and 3 LLMs**.
+- The dataset includes diverse jailbreak attack strategies, such as:
   - AutoDAN
   - GCG
   - PAIR
