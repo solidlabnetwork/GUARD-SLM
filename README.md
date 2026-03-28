@@ -79,8 +79,7 @@ pip install -r requirements.txt
   - TAP
 
 - Some malicious data collected from:
-  - JBShield (USENIX Security 2025)  
-    https://github.com/NISPLab/JBShield/tree/main/data
+  - JBShield (https://github.com/NISPLab/JBShield/tree/main/data)
 
 ---
 
