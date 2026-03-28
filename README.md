@@ -157,19 +157,15 @@ done
 ---
 
 ### 5. Inference (HarmBench)
-
+In this step, we perform inference on a single input file using a trained classifier from a specific layer. The model extracts the last-token activation, and the classifier determines whether each prompt is benign or malicious (jailbreak).
 ```bash
-for layer in $(seq 0 31); do
-  python inference.py \
-    --model meta-llama/Llama-2-7b-chat-hf \
-    --svm-path saved_models/llama/llama_layer_${layer}.joblib \
-    --layer ${layer} \
-    --input-file thu-coai/AISafetyLab_Datasets \
-    --hf-subset harmbench \
-    --hf-split standard \
-    --text-key query \
-    --out-dir outputs/llama_harmbench
-done
+python inference.py \
+  --model meta-llama/Llama-2-7b-chat-hf \
+  --svm-path saved_models/llama/llama_layer_18.joblib \
+  --layer 18 \
+  --input-file activation_data/<your_file>.jsonl \
+  --text-key query \
+  --out-dir outputs/single_inference
 ```
 
 ---
@@ -181,6 +177,7 @@ done
 
 ---
 ### 5. Judge
+In this part, we conduct the evaluation to measure the attack success rate (ASR).
 
 ```bash
 export OPENAI_API_KEY="your api key"
