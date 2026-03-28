@@ -80,7 +80,7 @@ pip install -r requirements.txt
 
 - Some malicious data collected from:
   - JBShield (USENIX Security 2025)  
-    https://www.usenix.org/conference/usenixsecurity25/presentation/zhang-shenyi
+    https://github.com/NISPLab/JBShield/tree/main/data
 
 ---
 
