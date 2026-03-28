@@ -63,11 +63,6 @@ pip install -r requirements.txt
 
 ## Additional Malicious Data
 
-- Located in:
-  ```
-  Dataset/Train/llama/v2/
-  ```
-
 - Includes diverse jailbreak attacks:
   - AutoDAN
   - GCG
@@ -81,7 +76,10 @@ pip install -r requirements.txt
 
 - Some jailbreak/malicious data's are collected from:
   - JBShield (https://github.com/NISPLab/JBShield/tree/main/data)
-
+  - Located in:
+  ```
+  Dataset/Train/llama/v2/
+  ```
 ---
 
 ## Experiments
