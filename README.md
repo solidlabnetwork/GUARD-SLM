@@ -2,7 +2,9 @@
 
 GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malicious prompts using **last-token hidden-layer activations** without requiring model retraining.
 
-![CHEESE!](framework.jpg)
+<p align="center">
+  <img src="framework.jpg" width="600"/>
+</p>
 ---
 
 ## Overview
