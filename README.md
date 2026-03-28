@@ -174,8 +174,17 @@ done
 - Evaluator: **GPT-4o and GPT-4o-mini**
 
 ---
+### 5. Judge
 
+```bash
+export OPENAI_API_KEY="your api key"
 
+python judge.py \
+  --input-file  your path \
+  --output-dir judge_results
+```
+
+---
 
 ## Citation
 
