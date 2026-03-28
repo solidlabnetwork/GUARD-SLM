@@ -16,7 +16,7 @@ GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malici
 ## Installation
 
 ```bash
-git clone <your-repo-link>
+git clone https://github.com/solidlabnetwork/GUARD-SLM.git
 cd GUARD-SLM
 
 pip install -r requirements.txt
