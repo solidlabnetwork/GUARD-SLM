@@ -79,7 +79,7 @@ pip install -r requirements.txt
   - Jailbroken
   - TAP
 
-- Some jailbreak/malicious datas are collected from:
+- Some jailbreak/malicious data's are collected from:
   - JBShield (https://github.com/NISPLab/JBShield/tree/main/data)
 
 ---
