@@ -184,9 +184,3 @@ done
 ```
 
 ---
-
-## ⭐ Acknowledgement
-
-- EasyJailbreak Dataset
-- JBShield (USENIX Security 2025)
-- Hugging Face community
