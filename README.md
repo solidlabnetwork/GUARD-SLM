@@ -79,8 +79,8 @@ pip install -r requirements.txt
   - Located in:
   ```
   Dataset/Train/llama/v2/
-  Dataset/Train/mistral/v2/
-  Dataset/Train/vicuna-7b/v2/
+  Dataset/Train/Mistral/v2/
+  Dataset/Train/Vicuna-7B/v2/
   ```
 ---
 
