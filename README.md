@@ -90,6 +90,7 @@ pip install -r requirements.txt
 ## Experiments
 
 ### 1. Extract Activations
+In this section, we extract the last-token activations from the language model, which are subsequently used for visualization and classification tasks.
 
 ```bash
 python main.py \
