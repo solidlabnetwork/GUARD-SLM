@@ -74,6 +74,7 @@ pip install -r requirements.txt
   - PAIR
   - Cipher
   - DeepInception
+  - CodeChameleon
   - ICA
   - Jailbroken
   - TAP
