@@ -5,7 +5,6 @@ GUARD-SLM is a lightweight, inference-time jailbreak defense that detects malici
 <p align="center">
   <img src="framework.jpg" width="600"/>
 </p>
----
 
 ## Overview
 
